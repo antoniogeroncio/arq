@@ -1,0 +1,21 @@
+{
+    "arqApplicationApp": {
+        "style": {
+            "home": {
+                "title": "Styles",
+                "createLabel": "Criar novo Style",
+                "createOrEditLabel": "Criar ou editar Style"
+            },
+            "created": "Um novo Style foi criado com o identificador {{ param }}",
+            "updated": "Um Style foi atualizado com o identificador {{ param }}",
+            "deleted": "Um Style foi deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Style {{ id }}?"
+            },
+            "detail": {
+                "title": "Style"
+            },
+            "tag": "Tag"
+        }
+    }
+}

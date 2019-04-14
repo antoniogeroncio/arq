@@ -1,0 +1,23 @@
+{
+    "arqApplicationApp": {
+        "catalog": {
+            "home": {
+                "title": "Catalogs",
+                "createLabel": "Criar novo Catalog",
+                "createOrEditLabel": "Criar ou editar Catalog"
+            },
+            "created": "Um novo Catalog foi criado com o identificador {{ param }}",
+            "updated": "Um Catalog foi atualizado com o identificador {{ param }}",
+            "deleted": "Um Catalog foi deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Catalog {{ id }}?"
+            },
+            "detail": {
+                "title": "Catalog"
+            },
+            "rating": "Rating",
+            "projetc": "Projetc",
+            "user": "User"
+        }
+    }
+}

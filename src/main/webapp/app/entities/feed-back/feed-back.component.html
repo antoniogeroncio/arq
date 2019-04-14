@@ -1,0 +1,68 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="arqApplicationApp.feedBack.home.title">Feed Backs</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-feed-back" [routerLink]="['/feed-back/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="arqApplicationApp.feedBack.home.createLabel">
+            Create new Feed Back
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="feedBacks">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="arqApplicationApp.feedBack.grade">Grade</span></th>
+            <th><span jhiTranslate="arqApplicationApp.feedBack.description">Description</span></th>
+            <th><span jhiTranslate="arqApplicationApp.feedBack.user">User</span></th>
+            <th><span jhiTranslate="arqApplicationApp.feedBack.projetc">Projetc</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let feedBack of feedBacks ;trackBy: trackId">
+                <td><a [routerLink]="['/feed-back', feedBack.id, 'view' ]">{{feedBack.id}}</a></td>
+                <td>{{feedBack.grade}}</td>
+                <td>{{feedBack.description}}</td>
+                <td>
+                    <div *ngIf="feedBack.user">
+                        <a [routerLink]="['../user-social', feedBack.user?.id, 'view' ]" >{{feedBack.user?.id}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="feedBack.projetc">
+                        <a [routerLink]="['../project', feedBack.projetc?.id, 'view' ]" >{{feedBack.projetc?.id}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['/feed-back', feedBack.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/feed-back', feedBack.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'feed-back', { outlets: { popup: feedBack.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

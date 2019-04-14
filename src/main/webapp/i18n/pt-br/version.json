@@ -1,0 +1,23 @@
+{
+    "arqApplicationApp": {
+        "version": {
+            "home": {
+                "title": "Versions",
+                "createLabel": "Criar novo Version",
+                "createOrEditLabel": "Criar ou editar Version"
+            },
+            "created": "Um novo Version foi criado com o identificador {{ param }}",
+            "updated": "Um Version foi atualizado com o identificador {{ param }}",
+            "deleted": "Um Version foi deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Version {{ id }}?"
+            },
+            "detail": {
+                "title": "Version"
+            },
+            "version": "Version",
+            "code": "Code",
+            "date": "Date"
+        }
+    }
+}

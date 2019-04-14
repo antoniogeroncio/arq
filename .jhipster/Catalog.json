@@ -1,0 +1,38 @@
+{
+    "name": "Catalog",
+    "fields": [
+        {
+            "fieldName": "rating",
+            "fieldType": "Rating",
+            "fieldValues": "PATTERNS,ANTIPATTERNS",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "project",
+            "otherEntityRelationshipName": "catalog",
+            "relationshipName": "projetc",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "userSocial",
+            "otherEntityRelationshipName": "catalog",
+            "relationshipName": "user",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190414192353",
+    "entityTableName": "catalog",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

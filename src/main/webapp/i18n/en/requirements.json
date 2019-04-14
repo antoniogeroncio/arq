@@ -1,0 +1,22 @@
+{
+    "arqApplicationApp": {
+        "requirements": {
+            "home": {
+                "title": "Requirements",
+                "createLabel": "Create a new Requirements",
+                "createOrEditLabel": "Create or edit a Requirements"
+            },
+            "created": "A new Requirements is created with identifier {{ param }}",
+            "updated": "A Requirements is updated with identifier {{ param }}",
+            "deleted": "A Requirements is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Requirements {{ id }}?"
+            },
+            "detail": {
+                "title": "Requirements"
+            },
+            "description": "Description",
+            "type": "Type"
+        }
+    }
+}

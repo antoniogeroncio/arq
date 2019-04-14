@@ -1,0 +1,22 @@
+{
+    "arqApplicationApp": {
+        "following": {
+            "home": {
+                "title": "Followings",
+                "createLabel": "Criar novo Following",
+                "createOrEditLabel": "Criar ou editar Following"
+            },
+            "created": "Um novo Following foi criado com o identificador {{ param }}",
+            "updated": "Um Following foi atualizado com o identificador {{ param }}",
+            "deleted": "Um Following foi deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Following {{ id }}?"
+            },
+            "detail": {
+                "title": "Following"
+            },
+            "follower": "Follower",
+            "following": "Following"
+        }
+    }
+}

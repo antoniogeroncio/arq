@@ -1,0 +1,9 @@
+{
+    "arqApplicationApp": {
+        "RequirementsType": {
+            "null": "",
+            "QA": "QA",
+            "FUNCTIONAL": "FUNCTIONAL"
+        }
+    }
+}
