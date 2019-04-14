@@ -1,0 +1,62 @@
+entity Project {
+	name String required,
+    description String required
+}
+
+entity Catalog{
+	rating Rating required 
+}
+
+enum Rating{
+    PATTERNS, ANTIPATTERNS
+}
+
+entity Metric {}
+
+entity Version{
+	version String required,
+    code Blob required,
+    date String required
+}
+
+entity Style{}
+
+entity Tag{
+	description String required
+}
+
+entity Requirements {
+	description String required
+}
+
+entity FeedBack {
+	grade Double required,
+    description String required
+}
+
+entity Comment {
+	description String required
+}
+
+entity Following{}
+
+entity Message{
+	description String required,
+    sendDate LocalDate required
+}
+
+entity UserSocial{}
+
+relationship ManyToOne {
+	Catalog{projetc} to Project,
+    Catalog{user} to UserSocial,
+    Metric{project} to Project,
+    Metric{user} to UserSocial
+}
+
+relationship OneToOne {
+    Metric{version} to Version
+}
+
+dto * with mapstruct
+
