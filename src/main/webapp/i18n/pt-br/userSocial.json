@@ -1,0 +1,20 @@
+{
+    "arqApplicationApp": {
+        "userSocial": {
+            "home": {
+                "title": "User Socials",
+                "createLabel": "Criar novo User Social",
+                "createOrEditLabel": "Criar ou editar User Social"
+            },
+            "created": "Um novo User Social foi criado com o identificador {{ param }}",
+            "updated": "Um User Social foi atualizado com o identificador {{ param }}",
+            "deleted": "Um User Social foi deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir User Social {{ id }}?"
+            },
+            "detail": {
+                "title": "User Social"
+            }
+        }
+    }
+}

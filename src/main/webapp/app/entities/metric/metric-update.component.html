@@ -1,0 +1,45 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-metric-heading" jhiTranslate="arqApplicationApp.metric.home.createOrEditLabel">Create or edit a Metric</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!metric.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="metric.id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="arqApplicationApp.metric.version" for="field_version">Version</label>
+                    <select class="form-control" id="field_version" name="version" [(ngModel)]="metric.version">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="versionOption.id === metric.version?.id ? metric.version : versionOption" *ngFor="let versionOption of versions; trackBy: trackVersionById">{{versionOption.id}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="arqApplicationApp.metric.project" for="field_project">Project</label>
+                    <select class="form-control" id="field_project" name="project" [(ngModel)]="metric.project" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="projectOption.id === metric.project?.id ? metric.project : projectOption" *ngFor="let projectOption of projects; trackBy: trackProjectById">{{projectOption.id}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="arqApplicationApp.metric.user" for="field_user">User</label>
+                    <select class="form-control" id="field_user" name="user" [(ngModel)]="metric.user" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="userSocialOption.id === metric.user?.id ? metric.user : userSocialOption" *ngFor="let userSocialOption of usersocials; trackBy: trackUserSocialById">{{userSocialOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+{
+    "arqApplicationApp": {
+        "metric": {
+            "home": {
+                "title": "Metrics",
+                "createLabel": "Criar novo Metric",
+                "createOrEditLabel": "Criar ou editar Metric"
+            },
+            "created": "Um novo Metric foi criado com o identificador {{ param }}",
+            "updated": "Um Metric foi atualizado com o identificador {{ param }}",
+            "deleted": "Um Metric foi deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Metric {{ id }}?"
+            },
+            "detail": {
+                "title": "Metric"
+            },
+            "version": "Version",
+            "project": "Project",
+            "user": "User"
+        }
+    }
+}

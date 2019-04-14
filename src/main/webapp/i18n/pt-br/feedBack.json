@@ -1,0 +1,24 @@
+{
+    "arqApplicationApp": {
+        "feedBack": {
+            "home": {
+                "title": "Feed Backs",
+                "createLabel": "Criar novo Feed Back",
+                "createOrEditLabel": "Criar ou editar Feed Back"
+            },
+            "created": "Um novo Feed Back foi criado com o identificador {{ param }}",
+            "updated": "Um Feed Back foi atualizado com o identificador {{ param }}",
+            "deleted": "Um Feed Back foi deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Feed Back {{ id }}?"
+            },
+            "detail": {
+                "title": "Feed Back"
+            },
+            "grade": "Grade",
+            "description": "Description",
+            "user": "User",
+            "projetc": "Projetc"
+        }
+    }
+}

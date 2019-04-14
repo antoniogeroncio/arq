@@ -1,0 +1,23 @@
+{
+    "arqApplicationApp": {
+        "comment": {
+            "home": {
+                "title": "Comments",
+                "createLabel": "Criar novo Comment",
+                "createOrEditLabel": "Criar ou editar Comment"
+            },
+            "created": "Um novo Comment foi criado com o identificador {{ param }}",
+            "updated": "Um Comment foi atualizado com o identificador {{ param }}",
+            "deleted": "Um Comment foi deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Comment {{ id }}?"
+            },
+            "detail": {
+                "title": "Comment"
+            },
+            "description": "Description",
+            "user": "User",
+            "projetc": "Projetc"
+        }
+    }
+}

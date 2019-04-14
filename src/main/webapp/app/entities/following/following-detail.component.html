@@ -1,0 +1,35 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="following">
+            <h2><span jhiTranslate="arqApplicationApp.following.detail.title">Following</span> {{following.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="arqApplicationApp.following.follower">Follower</span></dt>
+                <dd>
+                    <div *ngIf="following.follower">
+                        <a [routerLink]="['/user-social', following.follower?.id, 'view']">{{following.follower?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="arqApplicationApp.following.following">Following</span></dt>
+                <dd>
+                    <div *ngIf="following.following">
+                        <a [routerLink]="['/user-social', following.following?.id, 'view']">{{following.following?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/following', following.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

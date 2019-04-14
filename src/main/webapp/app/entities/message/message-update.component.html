@@ -1,0 +1,65 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-message-heading" jhiTranslate="arqApplicationApp.message.home.createOrEditLabel">Create or edit a Message</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!message.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="message.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="arqApplicationApp.message.description" for="field_description">Description</label>
+                    <input type="text" class="form-control" name="description" id="field_description"
+                        [(ngModel)]="message.description" required/>
+                    <div [hidden]="!(editForm.controls.description?.dirty && editForm.controls.description?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.description?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="arqApplicationApp.message.sendDate" for="field_sendDate">Send Date</label>
+                    <div class="input-group">
+                        <input id="field_sendDate" type="text" class="form-control" name="sendDate" ngbDatepicker  #sendDateDp="ngbDatepicker" [(ngModel)]="message.sendDate"
+                        required/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="sendDateDp.toggle()"><fa-icon [icon]="'calendar-alt'"></fa-icon></button>
+                        </span>
+                    </div>
+                    <div [hidden]="!(editForm.controls.sendDate?.dirty && editForm.controls.sendDate?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.sendDate?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="arqApplicationApp.message.sender" for="field_sender">Sender</label>
+                    <select class="form-control" id="field_sender" name="sender" [(ngModel)]="message.sender" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="userSocialOption.id === message.sender?.id ? message.sender : userSocialOption" *ngFor="let userSocialOption of usersocials; trackBy: trackUserSocialById">{{userSocialOption.id}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="arqApplicationApp.message.recipient" for="field_recipient">Recipient</label>
+                    <select class="form-control" id="field_recipient" name="recipient" [(ngModel)]="message.recipient" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="userSocialOption.id === message.recipient?.id ? message.recipient : userSocialOption" *ngFor="let userSocialOption of usersocials; trackBy: trackUserSocialById">{{userSocialOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
