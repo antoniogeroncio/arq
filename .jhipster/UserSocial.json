@@ -1,0 +1,14 @@
+{
+    "name": "UserSocial",
+    "fields": [],
+    "relationships": [],
+    "changelogDate": "20190414192506",
+    "entityTableName": "user_social",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

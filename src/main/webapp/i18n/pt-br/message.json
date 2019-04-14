@@ -1,0 +1,24 @@
+{
+    "arqApplicationApp": {
+        "message": {
+            "home": {
+                "title": "Messages",
+                "createLabel": "Criar novo Message",
+                "createOrEditLabel": "Criar ou editar Message"
+            },
+            "created": "Um novo Message foi criado com o identificador {{ param }}",
+            "updated": "Um Message foi atualizado com o identificador {{ param }}",
+            "deleted": "Um Message foi deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Message {{ id }}?"
+            },
+            "detail": {
+                "title": "Message"
+            },
+            "description": "Description",
+            "sendDate": "Send Date",
+            "sender": "Sender",
+            "recipient": "Recipient"
+        }
+    }
+}

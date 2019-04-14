@@ -1,0 +1,20 @@
+{
+    "arqApplicationApp": {
+        "userSocial": {
+            "home": {
+                "title": "User Socials",
+                "createLabel": "Create a new User Social",
+                "createOrEditLabel": "Create or edit a User Social"
+            },
+            "created": "A new User Social is created with identifier {{ param }}",
+            "updated": "A User Social is updated with identifier {{ param }}",
+            "deleted": "A User Social is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete User Social {{ id }}?"
+            },
+            "detail": {
+                "title": "User Social"
+            }
+        }
+    }
+}

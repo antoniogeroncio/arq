@@ -1,0 +1,44 @@
+{
+    "name": "FeedBack",
+    "fields": [
+        {
+            "fieldName": "grade",
+            "fieldType": "Double",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "userSocial",
+            "otherEntityRelationshipName": "feedBack",
+            "relationshipName": "user",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "project",
+            "otherEntityRelationshipName": "feedBack",
+            "relationshipName": "projetc",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190414192502",
+    "entityTableName": "feed_back",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

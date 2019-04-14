@@ -1,0 +1,41 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="metric">
+            <h2><span jhiTranslate="arqApplicationApp.metric.detail.title">Metric</span> {{metric.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="arqApplicationApp.metric.version">Version</span></dt>
+                <dd>
+                    <div *ngIf="metric.version">
+                        <a [routerLink]="['/version', metric.version?.id, 'view']">{{metric.version?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="arqApplicationApp.metric.project">Project</span></dt>
+                <dd>
+                    <div *ngIf="metric.project">
+                        <a [routerLink]="['/project', metric.project?.id, 'view']">{{metric.project?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="arqApplicationApp.metric.user">User</span></dt>
+                <dd>
+                    <div *ngIf="metric.user">
+                        <a [routerLink]="['/user-social', metric.user?.id, 'view']">{{metric.user?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/metric', metric.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

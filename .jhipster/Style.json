@@ -1,0 +1,22 @@
+{
+    "name": "Style",
+    "fields": [],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "tag",
+            "otherEntityRelationshipName": "style",
+            "relationshipName": "tag",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190414192459",
+    "entityTableName": "style",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
