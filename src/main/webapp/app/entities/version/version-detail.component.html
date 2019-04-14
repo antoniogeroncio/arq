@@ -1,0 +1,38 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="version">
+            <h2><span jhiTranslate="arqApplicationApp.version.detail.title">Version</span> {{version.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="arqApplicationApp.version.version">Version</span></dt>
+                <dd>
+                    <span>{{version.version}}</span>
+                </dd>
+                <dt><span jhiTranslate="arqApplicationApp.version.code">Code</span></dt>
+                <dd>
+                    <div *ngIf="version.code">
+                        <a (click)="openFile(version.codeContentType, version.code)" jhiTranslate="entity.action.open">open</a>
+                        {{version.codeContentType}}, {{byteSize(version.code)}}
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="arqApplicationApp.version.date">Date</span></dt>
+                <dd>
+                    <span>{{version.date}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/version', version.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

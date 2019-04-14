@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="catalog">
+            <h2><span jhiTranslate="arqApplicationApp.catalog.detail.title">Catalog</span> {{catalog.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="arqApplicationApp.catalog.rating">Rating</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'arqApplicationApp.Rating.' + catalog.rating}}">{{catalog.rating}}</span>
+                </dd>
+                <dt><span jhiTranslate="arqApplicationApp.catalog.projetc">Projetc</span></dt>
+                <dd>
+                    <div *ngIf="catalog.projetc">
+                        <a [routerLink]="['/project', catalog.projetc?.id, 'view']">{{catalog.projetc?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="arqApplicationApp.catalog.user">User</span></dt>
+                <dd>
+                    <div *ngIf="catalog.user">
+                        <a [routerLink]="['/user-social', catalog.user?.id, 'view']">{{catalog.user?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/catalog', catalog.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

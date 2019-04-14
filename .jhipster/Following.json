@@ -1,0 +1,29 @@
+{
+    "name": "Following",
+    "fields": [],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "userSocial",
+            "otherEntityRelationshipName": "following",
+            "relationshipName": "follower",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "userSocial",
+            "otherEntityRelationshipName": "following",
+            "relationshipName": "following",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190414192504",
+    "entityTableName": "following",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

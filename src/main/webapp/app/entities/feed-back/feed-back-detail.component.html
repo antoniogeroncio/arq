@@ -1,0 +1,43 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="feedBack">
+            <h2><span jhiTranslate="arqApplicationApp.feedBack.detail.title">Feed Back</span> {{feedBack.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="arqApplicationApp.feedBack.grade">Grade</span></dt>
+                <dd>
+                    <span>{{feedBack.grade}}</span>
+                </dd>
+                <dt><span jhiTranslate="arqApplicationApp.feedBack.description">Description</span></dt>
+                <dd>
+                    <span>{{feedBack.description}}</span>
+                </dd>
+                <dt><span jhiTranslate="arqApplicationApp.feedBack.user">User</span></dt>
+                <dd>
+                    <div *ngIf="feedBack.user">
+                        <a [routerLink]="['/user-social', feedBack.user?.id, 'view']">{{feedBack.user?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="arqApplicationApp.feedBack.projetc">Projetc</span></dt>
+                <dd>
+                    <div *ngIf="feedBack.projetc">
+                        <a [routerLink]="['/project', feedBack.projetc?.id, 'view']">{{feedBack.projetc?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/feed-back', feedBack.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
