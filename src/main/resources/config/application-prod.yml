@@ -27,9 +27,9 @@ spring:
             enabled: false
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:postgresql://localhost:5432/ArqApplication
-        username: ArqApplication
-        password:
+        url: jdbc:postgresql://ec2-184-73-210-189.compute-1.amazonaws.com:5432/d7ib7upimob42f
+        username: uifsooibehgapm
+        password: 32537cd72a78d1d3ba2cadfd1c1e2d482a8c1ff41847d66ed4508cdc38440389
         hikari:
             poolName: Hikari
             auto-commit: false
